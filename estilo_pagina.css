@@ -1,0 +1,127 @@
+* {
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+   margin: 0;
+   min-height: 100vh;
+   display: flex;
+}
+
+#background {
+   background-color: #f1acd4;
+
+   flex: 1;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+main h1 {
+   font-size: 80px;
+   margin: 10px;
+    color: rgb(246, 249, 193);
+   text-align: center;
+}
+
+main #turno {
+   font-size: 20px;
+   margin: 0 0 14px 0;
+   color: rgb(246, 249, 193);
+}
+
+main .victoria {
+   scale: 1.5;
+}
+
+#table {
+   margin-bottom: 10px;
+   border: 5px solid rgb(246, 249, 193);
+   background-color: rgb(246, 249, 193);
+
+   display: grid;
+   grid-template-columns: repeat(3, 100px);
+   grid-template-rows: repeat(3, 100px);
+   gap: 5px;
+}
+
+#table div {
+   background-color: #f1acd4;
+
+   font-size: 100px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.turnoX {
+   color: rgb(239, 75, 132);
+}
+
+.turnoO {
+   color: rgb(146, 51, 172);
+}
+
+.control {
+   display: flex;
+   align-items: center;
+   gap: 20%;
+
+   font-size: 20px;
+}
+
+.control #reset {
+   width: 150px;
+   height: 40px;
+   border: 2px solid rgb(246, 249, 193);
+   border-radius: 15px;
+    background-color:rgb(246, 249, 193);
+   font-size:16px;
+   cursor: pointer;
+   color: rgb(239, 75, 132);
+}
+
+.control #tiempo {
+   width: 150px;
+   height: 40px;
+  
+   border: 2px solid rgb(246, 249, 193);
+   border-radius: 15px;
+
+   background-color:rgb(246, 249, 193);
+   color: rgb(239, 75, 132);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@media (width < 400px) {
+   main h1 {
+      font-size: 60px;
+   }
+
+   #table {
+      grid-template-columns: repeat(3, 70px);
+      grid-template-rows: repeat(3, 70px);
+   }
+
+   #table div {
+      font-size: 70px;
+   }
+
+   .control {
+      gap: 40px;
+   }
+
+   .control #reset {
+      width: 80px;
+      font-size: 12px;
+   }
+
+   .control #tiempo {
+      width: 80px;
+   }
+}
